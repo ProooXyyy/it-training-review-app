@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Feedback Form</h2>
+        <form id="feedbackForm">
+            <label>Select Branch</label>
+            <select id="branch"><option value="WAKAD, PUNE">WAKAD, PUNE</option></select>
+
+            <label>Select Course</label>
+            <select id="course">
+                <option value="Data Science">Data Science</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="Full Stack">Full Stack Development</option>
+            </select>
+
+            <div class="rating-group">
+                <label>Teaching Quality</label>
+                <div class="stars" data-name="teaching">
+                    <input type="radio" name="teaching" value="5" id="t5"><label for="t5">★</label>
+                    <input type="radio" name="teaching" value="4" id="t4"><label for="t4">★</label>
+                    <input type="radio" name="teaching" value="3" id="t3"><label for="t3">★</label>
+                    <input type="radio" name="teaching" value="2" id="t2"><label for="t2">★</label>
+                    <input type="radio" name="teaching" value="1" id="t1"><label for="t1">★</label>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>Syllabus Covered</label>
+                <div class="stars" data-name="syllabus">
+                    <input type="radio" name="syllabus" value="5" id="s5"><label for="s5">★</label>
+                    <input type="radio" name="syllabus" value="4" id="s4"><label for="s4">★</label>
+                    <input type="radio" name="syllabus" value="3" id="s3"><label for="s3">★</label>
+                    <input type="radio" name="syllabus" value="2" id="s2"><label for="s2">★</label>
+                    <input type="radio" name="syllabus" value="1" id="s1"><label for="s1">★</label>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>How satisfied are you?</label>
+                <div class="stars" data-name="satisfaction">
+                    <input type="radio" name="satisfaction" value="5" id="sat5"><label for="sat5">★</label>
+                    <input type="radio" name="satisfaction" value="4" id="sat4"><label for="sat4">★</label>
+                    <input type="radio" name="satisfaction" value="3" id="sat3"><label for="sat3">★</label>
+                    <input type="radio" name="satisfaction" value="2" id="sat2"><label for="sat2">★</label>
+                    <input type="radio" name="satisfaction" value="1" id="sat1"><label for="sat1">★</label>
+                </div>
+            </div>
+
+            <button type="submit">Generate Review</button>
+        </form>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Your Generated Review</h3>
+            <p id="generatedReview"></p>
+            <button id="postBtn">Copy & Post on Google</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
